@@ -17,5 +17,6 @@
         "psr/http-message": "0.9.*"
     },
     "require-dev": {
+        "phly/http": "0.11.*"
     }
 }
