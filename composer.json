@@ -1,0 +1,20 @@
+{
+    "name": "lean-stack/lean",
+    "description": "Lean PHP web framework",
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Micha Alt",
+            "email": "lean-stack@michael-alt.info"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lean\\": "src/"
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+    }
+}
