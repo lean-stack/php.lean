@@ -2,21 +2,40 @@
 
 namespace Lean;
 
+use Phly\Conduit\MiddlewarePipe;
+use Phly\Http\Request;
+use Phly\Http\Response;
+use Phly\Http\Server;
+use Phly\Http\ServerRequestFactory;
+use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class App
 {
+    private $server;
+    private $pipe;
+
+    /**
+     * App constructor.
+     */
+    public function __construct()
+    {
+        $this->pipe = new MiddlewarePipe();
+    }
+
     /**
      * Main app runner
      */
     public function listen()
     {
-
+        $request = ServerRequestFactory::fromGlobals();
+        $this->server = Server::createServerFromRequest($this->pipe,$request);
+        $this->server->listen();
     }
 
-    /**
-     * Request handler
+     /**
+     * Request handler, enabling unit testing the App class
      *
      * @param ServerRequestInterface $request
      * @return ResponseInterface
@@ -24,8 +43,8 @@ class App
     public function handle(ServerRequestInterface $request)
     {
         /** @var ResponseInterface $response */
-        $response = null;
-
+        $response = new Response();
+        $response = call_user_func($this->pipe,$request,$response);
         return $response;
     }
 }

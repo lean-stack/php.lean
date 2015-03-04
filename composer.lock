@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bea92d25aa0f5e6a80c8483d7921eabb",
+    "hash": "d1da5f6de50874b0b028bc661022e466",
     "packages": [
         {
             "name": "psr/http-message",
@@ -54,6 +54,61 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "phly/conduit",
+            "version": "0.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phly/conduit.git",
+                "reference": "382586cbf79e98b1f21249c76a41647575225edc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phly/conduit/zipball/382586cbf79e98b1f21249c76a41647575225edc",
+                "reference": "382586cbf79e98b1f21249c76a41647575225edc",
+                "shasum": ""
+            },
+            "require": {
+                "phly/http": "^0.11",
+                "php": ">=5.4.8",
+                "psr/http-message": "^0.9",
+                "zendframework/zend-escaper": "~2.3@stable"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "squizlabs/php_codesniffer": "1.5.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev",
+                    "dev-develop": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Phly\\Conduit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Weier O'Phinney",
+                    "email": "matthew@weierophinney.net",
+                    "homepage": "http://mwop.net"
+                }
+            ],
+            "description": "Middleware for PHP",
+            "homepage": "https://github.com/phly/conduit",
+            "keywords": [
+                "http",
+                "middleware"
+            ],
+            "time": "2015-02-17 14:39:41"
+        },
         {
             "name": "phly/http",
             "version": "0.11.0",
@@ -105,6 +160,47 @@
                 "http"
             ],
             "time": "2015-02-17 14:28:44"
+        },
+        {
+            "name": "zendframework/zend-escaper",
+            "version": "2.3.4",
+            "target-dir": "Zend/Escaper",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendEscaper.git",
+                "reference": "67c8f76ff6d899a5619a4ab27c3b46ed3ae743fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendEscaper/zipball/67c8f76ff6d899a5619a4ab27c3b46ed3ae743fc",
+                "reference": "67c8f76ff6d899a5619a4ab27c3b46ed3ae743fc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Escaper\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zf2",
+            "keywords": [
+                "escaper",
+                "zf2"
+            ],
+            "time": "2015-01-14 16:44:17"
         }
     ],
     "aliases": [],

@@ -4,8 +4,8 @@
     bootstrap="vendor/autoload.php">
 
     <testsuites>
-        <testsuite name="Lean PHP web framework tests">
-            <directory>tests</directory>
+        <testsuite name="unit tests">
+            <directory>tests/unit</directory>
         </testsuite>
     </testsuites>
 </phpunit>
